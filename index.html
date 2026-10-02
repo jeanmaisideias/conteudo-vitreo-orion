@@ -7,7 +7,9 @@
 <meta content="#0a0a0b" name="theme-color"/>
 <title>Orion Residence — Plano de Conteúdo | Outubro 2026</title>
 
-<link href="styles.css" rel="stylesheet"/></head>
+<link href="styles.css" rel="stylesheet"/>
+<link href="tutorial.css" rel="stylesheet"/>
+</head>
 <body>
 <div class="wrap">
 <header class="hero">
@@ -15,6 +17,7 @@
 <span class="brand-mark">MAIS IDEIAS</span>
 <span class="brand-credit">Estratégia · Conteúdo · Performance</span>
 </div>
+<button class="tutorial-trigger" id="tutorialBtn" type="button" aria-haspopup="dialog" aria-controls="tutorialModal">Tutorial</button>
 <div class="eyebrow">Vitreo Empreendimentos · Orion Residence</div>
 <h1>Plano digital de conteúdo e execução</h1>
 <p class="subtitle">Calendário operacional a partir de 05/10/2026 para transformar o Maycon em presença comercial recorrente do Orion — com foco em clientes finais, corretores e conversão para visita/WhatsApp.</p>
@@ -91,5 +94,21 @@
 </footer>
 </div>
 
-<script src="content.js"></script><script src="app.js"></script></body>
+<div class="tutorial-overlay" id="tutorialModal" aria-hidden="true">
+  <div class="tutorial-modal" role="dialog" aria-modal="true" aria-labelledby="tutorialTitle" aria-describedby="tutorialText">
+    <button class="tutorial-close" id="tutorialClose" type="button" aria-label="Fechar tutorial">×</button>
+    <div class="tutorial-kicker">Como usar este painel</div>
+    <div class="tutorial-progress" aria-hidden="true"><div id="tutorialProgressBar"></div></div>
+    <div class="tutorial-step-label" id="tutorialStepLabel">Passo 1 de 8</div>
+    <h2 id="tutorialTitle">Comece pelo calendário</h2>
+    <p id="tutorialText"></p>
+    <div class="tutorial-tip" id="tutorialTip"></div>
+    <div class="tutorial-actions">
+      <button class="tutorial-nav secondary" id="tutorialPrev" type="button">Voltar</button>
+      <button class="tutorial-nav primary" id="tutorialNext" type="button">Prosseguir</button>
+    </div>
+  </div>
+</div>
+
+<script src="content.js"></script><script src="app.js"></script><script src="tutorial.js"></script></body>
 </html>

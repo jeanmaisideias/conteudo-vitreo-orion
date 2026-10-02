@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0a0a0b" name="theme-color"/>
+<title>Orion Residence — Plano de Conteúdo | Outubro 2026</title>
+
+<link href="styles.css" rel="stylesheet"/></head>
+<body>
+<div class="wrap">
+<header class="hero">
+<div class="brand-signature">
+<span class="brand-mark">MAIS IDEIAS</span>
+<span class="brand-credit">Estratégia · Conteúdo · Performance</span>
+</div>
+<div class="eyebrow">Vitreo Empreendimentos · Orion Residence</div>
+<h1>Plano digital de conteúdo e execução</h1>
+<p class="subtitle">Calendário operacional a partir de 05/10/2026 para transformar o Maycon em presença comercial recorrente do Orion — com foco em clientes finais, corretores e conversão para visita/WhatsApp.</p>
+<div class="meta-row">
+<span class="pill">05/10 → 31/10/2026</span>
+<span class="pill">16 conteúdos principais</span>
+<span class="pill">Stories de apoio</span>
+<span class="pill">Checklist salvo no navegador</span>
+</div>
+</header>
+<section class="stats">
+<div class="stat">
+<div class="label">Progresso geral</div>
+<div class="value" id="overallPct">0%</div>
+<div class="progress-shell"><div class="progress-fill" id="overallBar"></div></div>
+</div>
+<div class="stat">
+<div class="label">Publicados</div>
+<div class="value" id="publishedCount">0</div>
+<div class="small">de 16 conteúdos</div>
+</div>
+<div class="stat">
+<div class="label">Em produção</div>
+<div class="value" id="inProgressCount">0</div>
+<div class="small">iniciados e não publicados</div>
+</div>
+<div class="stat">
+<div class="label">Stories feitos</div>
+<div class="value" id="storiesCount">0</div>
+<div class="small" id="storiesTotalLabel">de 0 previstos</div>
+</div>
+</section>
+<div class="tabs">
+<button class="tab-btn active" data-tab="main">Conteúdos principais</button>
+<button class="tab-btn" data-tab="stories">Stories</button>
+</div>
+<section id="mainTab">
+<div class="toolbar">
+<input class="search" id="searchInput" placeholder="Buscar conteúdo, gancho, objetivo..."/>
+<div class="filters">
+<button class="filter-btn active" data-filter="all">Todos</button>
+<button class="filter-btn" data-filter="Cliente final">Cliente</button>
+<button class="filter-btn" data-filter="Corretor">Corretor</button>
+<button class="filter-btn" data-filter="Ambos">Ambos</button>
+</div>
+<button class="action-btn" id="printBtn">Imprimir</button>
+<button class="action-btn primary" id="exportBtn">Exportar CSV</button>
+<button class="action-btn danger" id="resetBtn">Limpar marcações</button>
+</div>
+<div class="section-title">
+<div>
+<h2>Agenda de postagens</h2>
+<p>Clique em cada item para abrir roteiro, captação e CTA.</p>
+</div>
+</div>
+<div class="list" id="contentList"></div>
+</section>
+<section class="hidden" id="storiesTab">
+<div class="section-title">
+<div>
+<h2>Stories de apoio</h2>
+<p>Rotina leve entre os conteúdos principais para manter o Orion presente todos os dias.</p>
+</div>
+</div>
+<div class="story-grid" id="storiesList"></div>
+</section>
+<footer>
+<div class="footer-brand">
+<span class="footer-dot"></span>
+<strong>MAIS IDEIAS</strong>
+<span class="footer-credit">Planejamento e estratégia: <b>Mais Ideias Marketing</b> · @maisideiasmkt</span>
+</div>
+<span>Orion Residence · Vitreo Empreendimentos · Dados salvos neste navegador</span>
+</footer>
+</div>
+
+<script src="content.js"></script><script src="app.js"></script></body>
+</html>

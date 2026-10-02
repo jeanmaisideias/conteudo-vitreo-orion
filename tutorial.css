@@ -1,0 +1,126 @@
+.tutorial-trigger{
+  position:absolute;
+  top:24px;
+  right:24px;
+  z-index:3;
+  border:1px solid rgba(196,181,253,.34);
+  background:rgba(139,92,246,.12);
+  color:#f4efff;
+  border-radius:999px;
+  padding:9px 14px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.04em;
+  transition:.18s ease;
+  backdrop-filter:blur(8px);
+}
+.tutorial-trigger:hover{transform:translateY(-1px);background:rgba(139,92,246,.22);border-color:rgba(196,181,253,.58)}
+.tutorial-trigger:focus-visible,.tutorial-nav:focus-visible,.tutorial-close:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
+
+.tutorial-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(4,4,7,.78);
+  backdrop-filter:blur(10px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .2s ease,visibility .2s ease;
+}
+.tutorial-overlay.open{opacity:1;visibility:visible}
+.tutorial-modal{
+  width:min(560px,100%);
+  max-height:min(720px,calc(100dvh - 32px));
+  overflow:auto;
+  position:relative;
+  background:linear-gradient(180deg,#18151f 0%,#111114 100%);
+  border:1px solid #40344f;
+  border-radius:24px;
+  box-shadow:0 28px 90px rgba(0,0,0,.58);
+  padding:28px;
+  transform:translateY(12px) scale(.985);
+  transition:transform .2s ease;
+}
+.tutorial-overlay.open .tutorial-modal{transform:translateY(0) scale(1)}
+.tutorial-close{
+  position:absolute;
+  top:16px;
+  right:16px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#211d27;
+  color:#fff;
+  cursor:pointer;
+  font-size:24px;
+  line-height:1;
+}
+.tutorial-kicker{
+  color:var(--accent-2);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding-right:50px;
+}
+.tutorial-progress{
+  height:6px;
+  background:#29242f;
+  border-radius:999px;
+  overflow:hidden;
+  margin:18px 0 10px;
+}
+.tutorial-progress>div{height:100%;width:12.5%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .25s ease}
+.tutorial-step-label{font-size:12px;color:#9993a3;margin-bottom:9px}
+.tutorial-modal h2{margin:0;font-size:28px;line-height:1.08;letter-spacing:-.035em;padding-right:28px}
+.tutorial-modal p{margin:14px 0 0;color:#d3cfd8;font-size:15px;line-height:1.6;white-space:pre-line}
+.tutorial-tip{
+  margin-top:18px;
+  padding:13px 14px;
+  border:1px solid rgba(139,92,246,.28);
+  background:rgba(139,92,246,.08);
+  border-radius:13px;
+  color:#cfc5e4;
+  font-size:13px;
+  line-height:1.5;
+}
+.tutorial-actions{display:flex;justify-content:space-between;gap:10px;margin-top:24px}
+.tutorial-nav{
+  min-height:44px;
+  border-radius:11px;
+  padding:10px 16px;
+  border:1px solid var(--line);
+  cursor:pointer;
+  font-weight:700;
+}
+.tutorial-nav.secondary{background:#201d25;color:#d8d5dc}
+.tutorial-nav.primary{margin-left:auto;background:linear-gradient(135deg,var(--accent),#6d3fd8);color:white;border-color:transparent}
+.tutorial-nav[disabled]{opacity:.35;cursor:not-allowed}
+body.tutorial-open{overflow:hidden}
+
+@media(max-width:560px){
+  .tutorial-trigger{top:14px;right:14px;padding:8px 12px;font-size:11px}
+  .hero .brand-signature{padding-right:84px}
+  .tutorial-overlay{padding:10px;align-items:flex-end}
+  .tutorial-modal{width:100%;max-height:88dvh;border-radius:22px 22px 14px 14px;padding:23px 18px calc(18px + env(safe-area-inset-bottom))}
+  .tutorial-modal h2{font-size:24px}
+  .tutorial-modal p{font-size:15px}
+  .tutorial-actions{position:sticky;bottom:-1px;background:linear-gradient(180deg,rgba(17,17,20,0),#111114 24%);padding-top:18px}
+  .tutorial-nav{flex:1;min-height:48px}
+  .tutorial-nav.primary{margin-left:0}
+}
+
+@media(max-width:350px){
+  .tutorial-trigger{top:12px;right:12px}
+  .hero .brand-signature{padding-right:76px}
+  .tutorial-modal{padding-left:15px;padding-right:15px}
+  .tutorial-modal h2{font-size:22px}
+}
+
+@media print{.tutorial-trigger,.tutorial-overlay{display:none!important}}
